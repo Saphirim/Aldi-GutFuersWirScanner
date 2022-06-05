@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Resources\Beep.wav" />
+		<None Remove="Resources\Yeah.wav" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Resources\Beep.wav">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Yeah.wav">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BarCode" Version="2022.5.5918" />
+		<PackageReference Include="OpenCvSharp4" Version="4.5.5.20211231" />
+		<PackageReference Include="OpenCvSharp4.Extensions" Version="4.5.5.20211231" />
+		<PackageReference Include="OpenCvSharp4.runtime.win" Version="4.5.5.20211231" />
+		<PackageReference Include="OpenCvSharp4.Windows" Version="4.5.5.20211231" />
+		<PackageReference Include="System.Windows.Extensions" Version="6.0.0" />
+	</ItemGroup>
+
+</Project>
