@@ -40,7 +40,7 @@ namespace AldiGutFuersWirQuickVoter
             }
 
             var postContent = "{\"projectpromoter\":\"tsv-grafing-ev\",\"direct_action\":\"\",\"email\":\"[\\\"" + votingCode + "\\\"]\"}";
-            var response = await _client.PostAsync("UriPath", new StringContent(postContent, Encoding.UTF8, "application/json"));
+            var response = await _client.PostAsync(UriPath, new StringContent(postContent, Encoding.UTF8, "application/json"));
 
             return response.StatusCode == HttpStatusCode.Created;
         }
